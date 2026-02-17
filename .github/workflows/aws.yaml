@@ -58,7 +58,9 @@ jobs:
           docker pull "${{ steps.login-ecr.outputs.registry }}/${{ secrets.ECR_REPO }}:latest"
 
       - name: Remove existing container if exists
-        run:  docker rm -f app || true
+        run:  |
+          docker rm -f app || true
+          docker ps -q --filter "publish=5000" | xargs -r docker rm -f
 
 
       - name: Run Docker Image to serve users
