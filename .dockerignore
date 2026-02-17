@@ -1,0 +1,10 @@
+artifact
+venv
+env
+myenv
+logs
+README.md
+LICENSE
+src.egg.-info
+notebook
+projectflow.txt
