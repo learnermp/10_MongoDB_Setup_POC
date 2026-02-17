@@ -119,7 +119,7 @@ the packages that are installed outside the src will now be able to communicate 
 27. Getting started with CI-CD process:
       * Setup the dockerfile and .dockerignore file
       * Setup the .github\workflows dir and aws.yaml file within
-      
+
      [ * Go to AWS console and create a new IAM user exactly the way we did earlier (name: "usvisa-user") >>
         Go inside user >> Security Credentials >> Access Keys >> create access key >> CLI >> check agreement
         >> next >> create access key >> download csv]
@@ -157,7 +157,8 @@ the packages that are installed outside the src will now be able to communicate 
       AWS_SECRET_ACCESS_KEY
       AWS_DEFAULT_REGION
       ECR_REPO
-
+      MONGODB_URL (if we want to train the model too, eneter url without double quote)
+      mongodb+srv://learnermp_db_user: De43V6FNggvmBLlS@cluster0.yllxby4.mongodb.net/?appName=Cluster0
 31. CI-CD pipeline will be triggered at next commit and push.
 32. Now we need to activate the 5000 port of our EC2 instance:
       * Go to the instance > Security > Go to Security Groups > Edit inbound rules > add rule
